@@ -1,0 +1,625 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v3.0 | 20180413
+   License: none (public domain)
+*/
+
+
+/* css reset */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    outline: none;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section {
+    display: block;
+}
+
+
+/* HTML5 hidden-attribute fix for newer browsers */
+
+*[hidden] {
+    display: none;
+}
+
+body {
+    line-height: 1;
+}
+
+.f-left {
+    float: left;
+}
+
+.f-right {
+    float: right;
+}
+
+.clear {
+    overflow: hidden;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.btn-primary {
+    color: white;
+    background-color: $theme_color;
+    text-align: center;
+}
+
+
+/* common通用样式 */
+
+
+/* picker */
+
+.van-picker .van-picker__toolbar {
+    height: 88px!important;
+    line-height: 88px!important;
+}
+
+.van-picker__cancel,
+.van-picker__confirm {
+    color: $theme_color;
+    font-size: 28px;
+    padding: 0 10px;
+}
+
+
+/* checkbox */
+
+.van-checkbox__label {
+    font-size: 26px;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    color: rgba(140, 140, 140, 1);
+    line-height: 44px;
+}
+
+.van-checkbox__icon {
+    height: 28px;
+    line-height: 28px;
+}
+
+
+/* 下拉菜单 */
+
+.van-dropdown-menu {
+    height: 84px;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+}
+
+.van-dropdown-menu__title {
+    font-size: 30px;
+    line-height: 11.2vw;
+}
+
+.van-dropdown-menu__title::after {
+    top: 45%;
+    right: -20px;
+    border-width: 6px;
+}
+
+.van-dropdown-menu__title--down::after {
+    top: 50%;
+    right: -20px;
+    border-width: 6px;
+}
+
+
+/* vant-list */
+
+.van-list__finished-text {
+    font-size: 24px;
+}
+
+.course-btn {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 88px;
+    line-height: 88px;
+    background: $theme_color;
+    text-align: center;
+    font-size: 34px;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+}
+
+.course-two-btn {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 88px;
+    line-height: 88px;
+    background: #fff;
+    text-align: center;
+    color: $theme_color;
+    display: flex;
+    button {
+        border: none;
+        height: 100%;
+        width: 50%;
+        font-size: 30px;
+        font-family: PingFangSC-Regular;
+        font-weight: 400;
+        &:nth-child(2) {
+            background: $theme_color;
+            color: rgba(255, 255, 255, 1);
+        }
+    }
+}
+
+
+/* tab */
+
+.van-tabs__wrap {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 99;
+    overflow: hidden;
+}
+
+.van-tabs--line {
+    padding-top: 90px;
+}
+
+.van-tabs--line .van-tabs__wrap {
+    height: 90px;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.van-tab {
+    font-size: 30px;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    line-height: 90px;
+}
+
+
+/* dialog */
+
+.van-dialog {
+    border-radius: 20px;
+}
+
+.van-hairline--top .van-button {
+    font-size: 34px;
+    height: 100px;
+    line-height: 100px;
+    background: $theme_color;
+    color: #fff;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.van-dialog__header {
+    font-family: PingFangSC-Regular;
+    font-size: 34px;
+    height: 100px;
+    line-height: 100px;
+    padding: 0;
+    color: #595959;
+    font-weight: 400;
+}
+
+.oto-model .van-button {
+    width: 100%;
+}
+
+.van-dialog__cancel.van-button {
+    background-color: #fff;
+    color: #595959;
+}
+
+.van-dialog__confirm.van-button {
+    background-color: $theme_color;
+    color: #fff;
+    width: 100%;
+}
+
+
+/* van-cell */
+
+.van-cell {
+    font-size: 30px;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.85);
+    padding: 0 30px;
+    height: 96px;
+    line-height: 96px;
+}
+
+.van-cell .van-cell__left-icon,
+.van-cell .van-cell__right-icon {
+    line-height: 96px;
+}
+
+
+/* 手风琴 */
+
+.van-collapse-item {
+    border-bottom: 1px dashed #E9E9E9;
+    padding-bottom: 20px;
+}
+
+.van-collapse-item:last-child {
+    border: none;
+}
+
+.van-collapse-item .van-cell {
+    line-height: 102px;
+    height: 92px;
+    font-size: 30px;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.85);
+    padding: 0;
+}
+
+.van-collapse-item .van-cell__left-icon,
+.van-cell__right-icon {
+    line-height: 102px;
+}
+
+
+/* 上拉菜单 */
+
+.van-action-sheet {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.van-action-sheet__header {
+    line-height: 90px;
+    padding-left: 30px;
+    font-size: 34px;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    color: rgba(38, 38, 38, 1);
+    text-align: left;
+}
+
+.van-action-sheet__close {
+    line-height: 60px;
+    font-size: 30px;
+}
+
+
+/* 提交 */
+
+.van-submit-bar__bar {
+    height: 108px;
+}
+
+.van-button--large {
+    height: 108px;
+    line-height: 108px;
+    width: 270px;
+    background: $theme_color;
+    font-size: 36px;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+}
+
+.van-submit-bar__text {
+    text-align: left;
+    padding-left: 48px;
+}
+
+.van-button--danger {
+    border: 0;
+}
+
+.van-submit-bar__text span {
+    color: #8C8C8C;
+    font-size: 20px;
+}
+
+.van-submit-bar__text span.van-submit-bar__price {
+    color: #E02020;
+    font-size: 46px;
+    padding-left: 10px;
+}
+
+.van-submit-bar__price::first-letter {
+    font-size: 24px;
+}
+
+
+/* 图片上传 */
+
+.van-uploader__upload {
+    width: 164px;
+    height: 164px;
+}
+
+.van-uploader__upload-icon {
+    font-size: 50px;
+}
+
+.van-uploader__preview-image {
+    width: 164px;
+    height: 164px;
+}
+
+.van-uploader__preview {
+    margin: 0 20px 20px 0;
+}
+
+
+/* van-tabs */
+
+.van-tab--active {
+    color: $theme_color;
+}
+
+.van-tabs__line {
+    background-color: $theme_color;
+}
+
+.van-list__loading {
+    display: none;
+}
+
+.van-picker-column__item {
+    font-size: 30px;
+}
+
+
+/*toast*/
+
+.van-toast {
+    font-size: 30px;
+    padding: 20px;
+    width: 150px;
+    min-height: 150px;
+    line-height: 40px;
+}
+
+.van-toast--text {
+    width: auto;
+    min-height: 40px;
+}
+
+.van-toast__icon {
+    font-size: 60px;
+}
+
+.van-loading__spinner {
+    width: 60px;
+    height: 60px;
+}
+
+.van-dialog__message--has-title {
+    font-size: 28px;
+    line-height: 38px;
+}
+
+.toast-loading {
+    background: none;
+    span {
+        color: $theme_color!important;
+    }
+}
+
+//筛选
+.course-fitler {
+    height: 84px;
+}
+
+.course-sort {
+    background: #fff;
+    li {
+        height: 102px;
+        text-align: center;
+        line-height: 102px;
+        font-size: 28px;
+        font-family: PingFangSC-Regular;
+        font-weight: 400;
+        color: rgba(89, 89, 89, 1);
+        border-bottom: 1px solid #f5f5f5;
+        &:last-child {
+            border: 0;
+        }
+    }
+    li.active {
+        color: $theme_color;
+    }
+}
+
+.van-tree-select__nav-item {
+    line-height: 100px;
+    font-size: 30px;
+    font-family: PingFang SC;
+    font-weight: 400;
+    color: #595959;
+    text-align: center;
+}
+
+.van-tree-select__nav-item--active {
+    border: none;
+    color: $theme_color;
+    font-weight: normal;
+    position: relative;
+}
+
+.van-tree-select__nav-item--active::before {
+    content: "";
+    width: 4px;
+    height: 40%;
+    background: $theme_color;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.van-tree-select__item {
+    line-height: 100px;
+    font-size: 30px;
+    font-family: PingFang SC;
+    font-weight: 400;
+    color: #595959;
+    padding-left: 30px;
+}
+
+.van-tree-select__item--active {
+    color: $theme_color;
+}
+
+.van-tree-select__selected {
+    display: none;
+}
+
+.question-box {
+    .van-radio__icon {
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .van-checkbox__icon {
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.van-search__content--round {
+    border-radius: 48px;
+}
